@@ -145,7 +145,7 @@
 \newcommand{\bsi}[2]
 {%
   \fontencoding{T1}
-  \fontfamily{\thefont}
+  %\fontfamily{\thefont}
   \fontseries{xl}
   \fontshape{n}%
   \fontsize{#1}{#2}
@@ -204,8 +204,8 @@
 {%
     \def\myhint
     {%
-        \psline[linecolor=\linecolor,linewidth=1.5pt](-0.5,0)(2,0)
-        \psline[linecolor=\linecolor,linewidth=1.5pt](-0.25,0.25)(-0.25,-1.75)
+        %\psline[linecolor=\linecolor,linewidth=1.5pt](-0.5,0)(2,0)
+        %\psline[linecolor=\linecolor,linewidth=1.5pt](-0.25,0.25)(-0.25,-1.75)
 
         \hinthead
 
@@ -385,12 +385,12 @@
         %EMPTY MINIPAGE
     \end{minipage}
 
-    \begin{minipage}[t]{\lwA}
-        \mypreparation\
-    \end{minipage}
-    \hfill
     \begin{minipage}[t]{\lwB}
         \myingredients\
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{\lwA}
+        \mypreparation\
     \end{minipage}
 
     \vfill
@@ -399,11 +399,11 @@
 \fi
 %% TRANSPARENT SUBSUBSECTION NAME IN THE MIDDLE OF THE PAGE
 \def\transpCoeff{0.3}
-\pstPutAbs(0.5\paperwidth,-0.5\paperheight){%
-        \rput(0,0){\parbox{\linewidth}{\centering%
-        \pscharpath[linestyle=none,fillstyle=solid,fillcolor=\recipecolorop,opacity=\transpCoeff]{%
-        {\bsi{60pt}{75pt}\recipename}}}}
-        }
+%\pstPutAbs(0.5\paperwidth,-0.5\paperheight){%
+%        \rput(0,0){\parbox{\linewidth}{\centering%
+%        \pscharpath[linestyle=none,fillstyle=solid,fillcolor=\recipecolorop,opacity=\transpCoeff]{%
+%        {\bsi{60pt}{75pt}\recipename}}}}
+%        }
     }
 }
 \pagestyle{fancy}
