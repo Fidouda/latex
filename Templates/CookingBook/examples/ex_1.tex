@@ -1,19 +1,16 @@
 \documentclass[%
-%twoside
+%twoside                      % Uncomment it out and see the difference
 ]{article}
-% Comment it out and see the difference
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% FONTENCODING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[T1]{fontenc}
-\usepackage{bookman}
-% Choose your favorite font for the text
+\usepackage[T1]{fontenc}      % Output encoding
+\usepackage[latin1]{inputenc} % Input encoding
+\usepackage{bookman}          % Choose your favorite font for the text (http://www.tug.dk/FontCatalogue/)
 \usepackage[dvipsnames,svgnames]{xcolor}
 
-\usepackage[
-%distiller
-]{pstricks}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% For EASY TYPESETTING RECIPES
@@ -25,8 +22,7 @@ myconfig
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% LANGUAGE SPECIFICATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[ngerman]{babel}
-% Choose your language
+\usepackage[francais]{babel}  % Choose your language
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -36,12 +32,13 @@ myconfig
 \setlength\parskip{2ex plus 0.5ex}
 % Definition of your personal favorized skips and indents
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% DOCUMENT DECLARATIONS within the PDF (STRG+D in Adobe Reader)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareDocInfo
 {%
-    title= My personal Cookybooky,
+    title= My personal Cooking Book,
     %university=My Supertitle,
     author=My Name,
     email=my@emailaddress,
@@ -50,6 +47,7 @@ myconfig
 %   version=1.0,
     keywords={Recipes typeset with LaTeX}
 }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% COLORS for the TITLEPAGE (author, title, link, etc.)
@@ -60,6 +58,7 @@ myconfig
     authorColor=black,
     linkColor=black
 }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% FONTDIMENSIONS and ALIGNMENT of the TITLEPAGE
@@ -123,6 +122,7 @@ myconfig
 %   numdingcolor=red
 %}
 
+
 %\usepackage[dvips]{graphicxsp}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Setting the Graphic path
@@ -147,16 +147,7 @@ myconfig
 
 \maketitle
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% SETTING THE BACKGROUND GRAPHIC ON EVERY PAGE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\template
-%[%
-%    name=p1,
-%    transparency={/ca .35 /BM/Screen}
-%]{bg}
-\template{\graphPath bg_transparent}
-%\textBgColor{yellow}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% INSERTING TABLE OF CONTENTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,26 +164,26 @@ On the following pages follow some recipes.
 
 \ingredients
 {%
-    \nicefrac{1}{2} & l & Wasser\\
-    4   & TL & Hagebuttentee\\
-    2   & EL & Honig\\
-    1   &    & Zitrone\\
-    \nicefrac{1}{2} &l & Fruchtsaft\\
-    100 & g  & Erdbeeren\\
-    50  & g  & Himbeeren\\
+    \nicefrac{1}{2} & liter & Water\\
+    4   & cup  & Tea\\
+    2   & tbsp & Honey\\
+    1   &      & Lemon\\
+    \nicefrac{1}{2} & liter & Fruit juice\\
+    100 & g  & Strawberries\\
+    50  & g  & Raspberries\\
     1   &    & Orange\\
-    100 & g  & Weintrauben
+    100 & g  & Grapes
 }
 
 \preparation
 {%
-    \init Wasser und Hagebuttentee mischen.  Mit dem Honig und dem Saft der Zitrone abschmecken.
-    \init In das Serviergef\"{a}{\ss} geben und erst kurz vor dem Eintreffen der G\"{a}ste das kleingeschnittene Obst (Erdbeeren, Himbeeren, Orangenfilets und entkernte Weintrauben) hinzuf\"{u}gen.
+    \init Mix water and tea. Season with the honey and the juice of the lemon.
+    \init Put into the serving dish and add the chopped fruit (strawberries, raspberries, orange fillets and pitted grapes) just before the arrival of the guests.
 }
 
 \hint
 {%
-    Ein Schu{\ss} Mineralwasser verleiht der Bowle ein erfrischendes Prickeln. Ein Schu{\ss} Mineralwasser verleiht der Bowle ein erfrischendes Prickeln.
+    A shot of mineral water gives the bowl a refreshing tingle. A shot of mineral water gives the bowl a refreshing tingle.
 }
 
 \graph      % This command MUST be LAST!
@@ -215,33 +206,33 @@ On the following pages follow some recipes.
 
 \ingredients
 {%
-    \nicefrac{1}{2} & l & Wasser\\
-    4   & TL & Hagebuttentee\\
-    2   & EL & Honig\\
-    1   &    & Zitrone\\
-    \nicefrac{1}{2} &l & Fruchtsaft\\
-    100 & g  & Erdbeeren\\
-    50  & g  & Himbeeren\\
+    \nicefrac{1}{2} & liter & Water\\
+    4   & cup  & Tea\\
+    2   & tbsp & Honey\\
+    1   &      & Lemon\\
+    \nicefrac{1}{2} & liter & Fruit juice\\
+    100 & g  & Strawberries\\
+    50  & g  & Raspberries\\
     1   &    & Orange\\
-    100 & g  & Weintrauben
+    100 & g  & Grapes
 }
 
 \preparation
 {%
-    \init Wasser und Hagebuttentee mischen.  Mit dem Honig und dem Saft der Zitrone abschmecken.
-    \init In das Serviergef\"{a}{\ss} geben und erst kurz vor dem Eintreffen der G\"{a}ste das kleingeschnittene Obst (Erdbeeren, Himbeeren, Orangenfilets und entkernte Weintrauben) hinzuf\"{u}gen.
+    \init Mix water and tea. Season with the honey and the juice of the lemon.
+    \init Put into the serving dish and add the chopped fruit (strawberries, raspberries, orange fillets and pitted grapes) just before the arrival of the guests.
 }
 
 \hint
 {%
-    Ein Schu{\ss} Mineralwasser verleiht der Bowle ein erfrischendes Prickeln. Ein Schu{\ss} Mineralwasser verleiht der Bowle ein erfrischendes Prickeln.
+    A shot of mineral water gives the bowl a refreshing tingle. A shot of mineral water gives the bowl a refreshing tingle.
 }
 
 \graph       % This command MUST be LAST!
 [%
-    recipename=Obstbowle,
+    recipename=Fruit bowl,
     recipetime={5 min},
-    portion={F\"{u}r 1 l},
+    portion={For 4 person},
     joule={1 kJ},
     sgraph=bgraph,
     sdx=-2,
