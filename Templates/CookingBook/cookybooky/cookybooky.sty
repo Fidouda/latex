@@ -263,98 +263,6 @@
 {%
     \setkeys{graph}{#1}
     {%
-      \if@twoside
-        \ifodd\arabic{page}
-    %% FIRST MINIPAGEBLOCK
-        \begin{minipage}[t]{\lwA}
-            \begin{pspicture*}(0,0)(\linewidth,6)
-                \rput[lb](\bdx,\bdy){\includegraphics[width=\linewidth]%
-                {\graphPath\bgraph}}
-            \end{pspicture*}
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{\lwB}
-            \begin{pspicture*}(0,0)(\linewidth,6)
-                \rput[lb](\sdx,\sdy){\includegraphics[height=6cm]%
-                {\graphPath\sgraph}}
-        \end{pspicture*}
-        \end{minipage}
-
-   %% SECOND MINIPAGEBLOCK
-
-        \begin{minipage}[t]{\lwA}
-            \parbox[t]{\lwA}{\subsubsection[\normalsize\recipename]%
-            {\textcolor{\recipecolor}{\bsi{24pt}{30pt}\recipename}}}
-            \\[14pt]
-            \parbox[t]{\lwA}{%
-            \recipetime
-
-            \portion
-
-            \joule}
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{\lwB}
-            %EMPTY MINIPAGE
-        \end{minipage}
-
-  %% THIRD MINIPAGEBLOCK
-
-        \begin{minipage}[t]{\lwA}
-            \mypreparation\
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{\lwB}
-            \myingredients\
-        \end{minipage}
-
-        \vfill
-
-        \myhint
-    \else
-        \begin{minipage}[t]{\lwB}
-            \begin{pspicture*}(0,0)(\linewidth,6)
-                \rput[lb](\sdx,\sdy){\includegraphics[height=6cm]%
-                {\graphPath\sgraph}}
-            \end{pspicture*}
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{\lwA}
-            \begin{pspicture*}(0,0)(\linewidth,6)
-                \rput[lb](\bdx,\bdy){\includegraphics[width=\linewidth]%
-                {\graphPath\bgraph}}
-            \end{pspicture*}
-        \end{minipage}
-
-        \begin{minipage}[t]{\lwB}
-            %EMPTY MINIPAGE
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{\lwA}
-            \parbox[t]{\lwA}{\subsubsection[\normalsize\recipename]%
-            {\textcolor{\recipecolor}{\bsi{24pt}{30pt}\recipename}}}
-            \\[14pt]
-            \parbox[t]{\lwA}{%
-            \recipetime
-
-            \portion
-
-            \joule}
-        \end{minipage}
-
-        \begin{minipage}[t]{\lwB}
-            \myingredients\
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{\lwA}
-            \mypreparation\
-        \end{minipage}
-
-        \vfill
-
-        \myhint
-    \fi
-\else
     \begin{minipage}[t]{\lwA}
         \begin{pspicture*}(0,0)(\linewidth,6)
             \rput[lb](\bdx,\bdy){\includegraphics[width=\linewidth]%
@@ -396,14 +304,6 @@
     \vfill
 
     \myhint\nopagebreak
-\fi
-%% TRANSPARENT SUBSUBSECTION NAME IN THE MIDDLE OF THE PAGE
-\def\transpCoeff{0.3}
-%\pstPutAbs(0.5\paperwidth,-0.5\paperheight){%
-%        \rput(0,0){\parbox{\linewidth}{\centering%
-%        \pscharpath[linestyle=none,fillstyle=solid,fillcolor=\recipecolorop,opacity=\transpCoeff]{%
-%        {\bsi{60pt}{75pt}\recipename}}}}
-%        }
     }
 }
 \pagestyle{fancy}
