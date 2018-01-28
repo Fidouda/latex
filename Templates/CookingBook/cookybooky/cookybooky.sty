@@ -66,6 +66,7 @@
 \RequirePackage[absolute,notitlepage]{pst-abspos}
 \RequirePackage{nicefrac}
 \RequirePackage{fancyhdr}
+\RequirePackage{etoolbox}        % Look if a def is specified
 \screensize{297mm}{210mm}        % height, width
 \margins{.5in}{.25in}{1in}{1in}  % left, right, top, bottom
 \useFullWidthForPaper
@@ -215,10 +216,10 @@
         \end{minipage}
     }
 }
-\define@key{graph}{sgraph}[sgraph]{\def\sgraph{#1}}
+\define@key{graph}{sgraph}[]{\def\sgraph{#1}}
 \define@key{graph}{sdx}[0]{\def\sdx{#1}}
 \define@key{graph}{sdy}[0]{\def\sdy{#1}}
-\define@key{graph}{bgraph}[bgraph]{\def\bgraph{#1}}
+\define@key{graph}{bgraph}[]{\def\bgraph{#1}}
 \define@key{graph}{bdx}[0]{\def\bdx{#1}}
 \define@key{graph}{bdy}[0]{\def\bdy{#1}}
 \define@key{graph}{recipename}[TestRecipe]{\def\recipename{#1}}
@@ -263,19 +264,25 @@
 {%
     \setkeys{graph}{#1}
     {%
-    \begin{minipage}[t]{\lwA}
-        \begin{pspicture*}(0,0)(\linewidth,6)
-            \rput[lb](\bdx,\bdy){\includegraphics[width=\linewidth]%
-            {\graphPath\bgraph}}
-        \end{pspicture*}
-    \end{minipage}
+    \ifdefempty{\bgraph}{}
+    {%
+        \begin{minipage}[t]{\lwA}
+            \begin{pspicture*}(0,0)(\linewidth,6)
+                \rput[lb](\bdx,\bdy){\includegraphics[width=\linewidth]%
+                {\graphPath\bgraph}}
+            \end{pspicture*}
+        \end{minipage}
+    }
     \hfill
-    \begin{minipage}[t]{\lwB}
-        \begin{pspicture*}(0,0)(\linewidth,6)
-            \rput[lb](\sdx,\sdy){\includegraphics[height=6cm]%
-            {\graphPath\sgraph}}
-        \end{pspicture*}
-    \end{minipage}
+    \ifdefempty{\sgraph}{}
+    {%
+        \begin{minipage}[t]{\lwB}
+            \begin{pspicture*}(0,0)(\linewidth,6)
+                \rput[lb](\sdx,\sdy){\includegraphics[height=6cm]%
+                {\graphPath\sgraph}}
+            \end{pspicture*}
+        \end{minipage}
+    }
 
     \begin{minipage}[t]{\lwA}
         \parbox[t]{\lwA}{\subsubsection[\normalsize\recipename]%
