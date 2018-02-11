@@ -226,6 +226,7 @@
 \define@key{graph}{recipetime}[TesTime]{\def\recipetime{#1}}
 \define@key{graph}{portion}[TestPortion]{\def\portion{#1}}
 \define@key{graph}{joule}[TestEnergy]{\def\joule{#1}}
+\define@key{graph}{source}[BogusSource]{\def\source{#1}}
 \savekeys{graph}
 {%
     sgraph,
@@ -237,7 +238,8 @@
     recipename,
     recipetime,
     portion,
-    joule
+    joule,
+    source
 }
 \newcommand*{\graphic}[1][]
 {%
@@ -249,6 +251,7 @@
     recipetime,
     portion,
     joule,
+    source,
     sgraph,
     sdx,
     sdy,
@@ -293,7 +296,9 @@
 
             \portion
 
-            \joule}
+            \joule
+
+            \source}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{\lwB}
