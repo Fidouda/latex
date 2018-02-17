@@ -67,6 +67,7 @@
 \RequirePackage{nicefrac}
 \RequirePackage{fancyhdr}
 \RequirePackage{etoolbox}        % Look if a def is specified
+\RequirePackage{fontawesome}	 % FontAwesome for various icons
 \screensize{297mm}{210mm}        % height, width
 \margins{.5in}{.25in}{1in}{1in}  % left, right, top, bottom
 \useFullWidthForPaper
@@ -223,10 +224,10 @@
 \define@key{graph}{bdx}[0]{\def\bdx{#1}}
 \define@key{graph}{bdy}[0]{\def\bdy{#1}}
 \define@key{graph}{recipename}[TestRecipe]{\def\recipename{#1}}
-\define@key{graph}{recipetime}[TesTime]{\def\recipetime{#1}}
-\define@key{graph}{portion}[TestPortion]{\def\portion{#1}}
-\define@key{graph}{joule}[TestEnergy]{\def\joule{#1}}
-\define@key{graph}{source}[BogusSource]{\def\source{#1}}
+\define@key{graph}{recipetime}[TesTime]{\def\recipetime{\faClockO{}~~~#1}}
+\define@key{graph}{portion}[TestPortion]{\def\portion{\faCutlery{}~~~#1}}
+\define@key{graph}{joule}[TestEnergy]{\def\joule{\faInfoCircle{}~~~#1}}
+\define@key{graph}{source}[BogusSource]{\def\source{\faFileTextO{}~~~#1}}
 \savekeys{graph}
 {%
     sgraph,
