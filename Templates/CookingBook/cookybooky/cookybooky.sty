@@ -67,7 +67,7 @@
 \RequirePackage{nicefrac}
 \RequirePackage{fancyhdr}
 \RequirePackage{etoolbox}        % Look if a def is specified
-\RequirePackage{fontawesome}	 % FontAwesome for various icons
+\RequirePackage{fontawesome}     % FontAwesome for various icons
 \screensize{297mm}{210mm}        % height, width
 \margins{.5in}{.25in}{1in}{1in}  % left, right, top, bottom
 \useFullWidthForPaper
@@ -226,7 +226,7 @@
 \define@key{graph}{recipename}[TestRecipe]{\def\recipename{#1}}
 \define@key{graph}{recipetime}[TesTime]{\def\recipetime{\faClockO{}~~~#1}}
 \define@key{graph}{portion}[TestPortion]{\def\portion{\faCutlery{}~~~#1}}
-\define@key{graph}{joule}[TestEnergy]{\def\joule{\faInfoCircle{}~~~#1}}
+\define@key{graph}{joule}[TestEnergy]{\def\joule{\faInfoCircle{}~~~{\scriptsize #1}}}
 \define@key{graph}{source}[BogusSource]{\def\source{\faFileTextO{}~~~#1}}
 \savekeys{graph}
 {%
@@ -288,11 +288,11 @@
         \end{minipage}
     }
 
-    \begin{minipage}[t]{\lwA}
+    \begin{minipage}[t]{\linewidth}
         \parbox[t]{\lwA}{\subsubsection[\normalsize\recipename]%
         {\textcolor{\recipecolor}{\bsi{24pt}{30pt}\recipename}}}
             \\[14pt]
-            \parbox[t]{\lwA}{%
+            \parbox[t]{\linewidth}{%
             \recipetime
 
             \portion
@@ -302,9 +302,6 @@
             \source}
     \end{minipage}
     \hfill
-    \begin{minipage}[t]{\lwB}
-        %EMPTY MINIPAGE
-    \end{minipage}
 
     \begin{minipage}[t]{\lwB}
         \myingredients\
