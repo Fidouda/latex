@@ -226,8 +226,8 @@
 \define@key{graph}{recipename}[TestRecipe]{\def\recipename{#1}}
 \define@key{graph}{recipetime}[TesTime]{\def\recipetime{\faClockO{}~~~#1}}
 \define@key{graph}{portion}[TestPortion]{\def\portion{\faCutlery{}~~~#1}}
-\define@key{graph}{joule}[TestEnergy]{\def\joule{\faInfoCircle{}~~~{\scriptsize #1}}}
-\define@key{graph}{source}[BogusSource]{\def\source{\faFileTextO{}~~~#1}}
+\define@key{graph}{joule}[]{\def\joule{\ifstrempty{#1}{}{\faInfoCircle{}~~~{\scriptsize #1}}}}
+\define@key{graph}{source}[]{\def\source{\ifstrempty{#1}{}{\faFileTextO{}~~~#1}}}
 \savekeys{graph}
 {%
     sgraph,
