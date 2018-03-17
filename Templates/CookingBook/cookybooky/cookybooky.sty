@@ -170,35 +170,93 @@
 }
 \newcommand{\inghead}
 {%
-    \textcolor{\ingheadcolor}{\textbf{Zutaten}\ }
+    \textcolor{\ingheadcolor}{\textbf{Ingredients}\ }
 }
 \newcommand{\prephead}
 {%
-    \textcolor{\prepheadcolor}{\textbf{Zubereitung}\ }
+    \textcolor{\prepheadcolor}{\textbf{Preparation}\ }
 }
 \newcommand{\hinthead}
 {%
     \textcolor{\linecolor}{\Large{Tip:}}
 }
-\newcommand*{\ingredients}[1]
+\newcommand*{\ingredients}[6]
 {%
     \def\myingredients
     {%
         \textcolor{\ingheadcolor}{\inghead}
-        \\[4pt]
+        % First group of ingredients
+        \\[4pt] 
+        \ifstrempty{#1}
+        {}
+        {%
+            \small\color{\ingredcolor}{\textit{#1}}
+            \\[2pt]
+        }
         \footnotesize\color{\ingredcolor}
         \begin{tabular}{rll}
-            #1
+            #2
+        \end{tabular}
+        % Second group of ingredients
+        \\[10pt]
+        \ifstrempty{#3}
+        {}
+        {%
+            \small\color{\ingredcolor}{\textit{#3}}
+            \\[2pt]
+        }
+        \footnotesize\color{\ingredcolor}
+        \begin{tabular}{rll}
+            #4
+        \end{tabular}
+        % Third group of ingredients
+        \\[10pt]
+        \ifstrempty{#5}
+        {}
+        {%
+            \small\color{\ingredcolor}{\textit{#5}}
+            \\[2pt]
+        }
+        \footnotesize\color{\ingredcolor}
+        \begin{tabular}{rll}
+            #6
         \end{tabular}
     }
 }
-\newcommand*{\preparation}[1]
+\newcommand*{\preparation}[6]
 {%
     \def\mypreparation
     {%
         \prephead
-        \\[4pt]
-        #1
+        % First group of preparation instructions
+        \ifstrempty{#1}
+        {%
+        }
+        {%
+            \\[4pt]
+            \color{\prepheadcolor}{\textit{#1}}
+        }
+        #2
+        % Second group of preparation instructions
+        \ifstrempty{#3}
+        {%
+            \\[4pt]
+        }
+        {%
+            \\[10pt]
+            \color{\prepheadcolor}{\textit{#3}}
+        }
+        #4
+        % Third group of preparation instructions
+        \ifstrempty{#5}
+        {%
+            \\[4pt]
+        }
+        {%
+            \\[10pt]
+            \color{\prepheadcolor}{\textit{#5}}
+        }
+        #6
     }
 \setcounter{init}{0}
 }
